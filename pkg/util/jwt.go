@@ -12,20 +12,19 @@ var jwtSecret = []byte(setting.JwtSecret)
 
 type Claims struct {
 	Username string `json:"username"`
-	Password string `json:"password"`
 	jwt.StandardClaims
 }
 
-func GenerateToken(username, password string) (string, error) {
+func GenerateToken(username string) (string, error) {
 	nowTime := time.Now()
+	// 3小时过期
 	expireTime := nowTime.Add(3 * time.Hour)
 
 	claims := Claims{
 		username,
-		password,
 		jwt.StandardClaims {
 			ExpiresAt : expireTime.Unix(),
-			Issuer : "gin-blog",
+			Issuer : "jinpika", // 签发人
 		},
 	}
 
