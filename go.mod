@@ -4,6 +4,7 @@ go 1.13
 
 require (
 	github.com/astaxie/beego v1.12.3 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/gin-gonic/gin v1.7.7
 	github.com/go-ini/ini v1.66.4 // indirect
 	github.com/go-playground/validator/v10 v10.10.1 // indirect
@@ -29,6 +30,6 @@ replace (
 	example/middleware => ./middleware
 	example/models => ./models
 	example/pkg/setting => ./pkg/setting
-	example/routers => ./routers
 	example/pkg/util => ./pkg/util
+	example/routers => ./routers
 )
