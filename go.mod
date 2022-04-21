@@ -32,4 +32,5 @@ replace (
 	example/pkg/setting => ./pkg/setting
 	example/pkg/util => ./pkg/util
 	example/routers => ./routers
+	example/pkg/logging => ./pkg/logging
 )
